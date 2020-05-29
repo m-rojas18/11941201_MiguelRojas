@@ -1457,7 +1457,7 @@
                                       <Group type="102" alignment="0" attributes="0">
                                           <Component id="jLabel51" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace min="-2" pref="52" max="-2" attributes="0"/>
-                                          <Component id="jb_colorR1" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jb_colorOH" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace type="separate" max="-2" attributes="0"/>
                                           <Component id="jp_colorR1" min="-2" max="-2" attributes="0"/>
                                       </Group>
@@ -1469,9 +1469,9 @@
                                           </Group>
                                           <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
                                           <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                                              <Component id="tf_tamanoR1" alignment="0" max="32767" attributes="0"/>
-                                              <Component id="tf_marcaR1" alignment="0" max="32767" attributes="0"/>
-                                              <Component id="tf_calidadR1" alignment="1" min="-2" pref="170" max="-2" attributes="0"/>
+                                              <Component id="tf_tamanoOH" alignment="0" max="32767" attributes="0"/>
+                                              <Component id="tf_marcaOH" alignment="0" max="32767" attributes="0"/>
+                                              <Component id="tf_calidadOH" alignment="1" min="-2" pref="170" max="-2" attributes="0"/>
                                           </Group>
                                       </Group>
                                   </Group>
@@ -1484,13 +1484,13 @@
                                               <Component id="jLabel55" min="-2" max="-2" attributes="0"/>
                                           </Group>
                                           <EmptySpace min="-2" pref="81" max="-2" attributes="0"/>
-                                          <Component id="cb_personaIngresadaR1" min="-2" max="-2" attributes="0"/>
+                                          <Component id="cb_personaIngresadaOH" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                       <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
                                           <Group type="102" alignment="0" attributes="0">
                                               <Component id="jLabel62" min="-2" max="-2" attributes="0"/>
                                               <EmptySpace max="32767" attributes="0"/>
-                                              <Component id="jTextField1" min="-2" pref="79" max="-2" attributes="0"/>
+                                              <Component id="tf_tiempoOH" min="-2" pref="79" max="-2" attributes="0"/>
                                           </Group>
                                           <Component id="jScrollPane7" alignment="0" min="-2" pref="264" max="-2" attributes="0"/>
                                       </Group>
@@ -1500,7 +1500,7 @@
                                   <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                                   <Group type="103" groupAlignment="1" attributes="0">
                                       <Component id="jb_crearOH" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jComboBox1" min="-2" max="-2" attributes="0"/>
+                                      <Component id="cb_lugarOH" min="-2" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                           </Group>
@@ -1514,17 +1514,17 @@
                           <EmptySpace min="-2" pref="44" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="jLabel55" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="cb_personaIngresadaR1" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="cb_personaIngresadaOH" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="jLabel51" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jb_colorR1" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jb_colorOH" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="jp_colorR1" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="jComboBox1" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="cb_lugarOH" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="jLabel60" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <Group type="103" groupAlignment="0" attributes="0">
@@ -1537,14 +1537,14 @@
                                   <EmptySpace min="-2" pref="42" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
                                       <Component id="jLabel57" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="tf_marcaR1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="tf_marcaOH" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
-                                      <Component id="tf_tamanoR1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="tf_tamanoOH" alignment="3" min="-2" max="-2" attributes="0"/>
                                       <Component id="jLabel58" alignment="3" min="-2" max="-2" attributes="0"/>
                                       <Component id="jLabel62" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jTextField1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="tf_tiempoOH" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
@@ -1557,7 +1557,7 @@
                           <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="jLabel59" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="tf_calidadR1" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="tf_calidadOH" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                           <Component id="jb_crearOH" min="-2" pref="44" max="-2" attributes="0"/>
@@ -1572,14 +1572,14 @@
                     <Property name="text" type="java.lang.String" value="Color:"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="tf_marcaR1">
+                <Component class="javax.swing.JTextField" name="tf_marcaOH">
                 </Component>
-                <Component class="javax.swing.JButton" name="jb_colorR1">
+                <Component class="javax.swing.JButton" name="jb_colorOH">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Color"/>
                   </Properties>
                   <Events>
-                    <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jb_colorR1MouseClicked"/>
+                    <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jb_colorOHMouseClicked"/>
                   </Events>
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel52">
@@ -1594,7 +1594,7 @@
 
                   <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
                   <SubComponents>
-                    <Component class="javax.swing.JTextArea" name="ta_descripcionR1">
+                    <Component class="javax.swing.JTextArea" name="ta_descripcionOH">
                       <Properties>
                         <Property name="columns" type="int" value="20"/>
                         <Property name="rows" type="int" value="5"/>
@@ -1602,7 +1602,7 @@
                     </Component>
                   </SubComponents>
                 </Container>
-                <Component class="javax.swing.JTextField" name="tf_calidadR1">
+                <Component class="javax.swing.JTextField" name="tf_calidadOH">
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel55">
                   <Properties>
@@ -1617,7 +1617,7 @@
                     <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jb_crearOHMouseClicked"/>
                   </Events>
                 </Component>
-                <Component class="javax.swing.JComboBox" name="cb_personaIngresadaR1">
+                <Component class="javax.swing.JComboBox" name="cb_personaIngresadaOH">
                   <Properties>
                     <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
                       <StringArray count="1">
@@ -1654,7 +1654,7 @@
                     <Property name="text" type="java.lang.String" value="Marca:"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="tf_tamanoR1">
+                <Component class="javax.swing.JTextField" name="tf_tamanoOH">
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel58">
                   <Properties>
@@ -1666,7 +1666,7 @@
                     <Property name="text" type="java.lang.String" value="Calidad:"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JComboBox" name="jComboBox1">
+                <Component class="javax.swing.JComboBox" name="cb_lugarOH">
                   <Properties>
                     <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
                       <StringArray count="4">
@@ -1698,7 +1698,7 @@
 
                   <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
                   <SubComponents>
-                    <Component class="javax.swing.JTextArea" name="jTextArea1">
+                    <Component class="javax.swing.JTextArea" name="ta_instruccionesOH">
                       <Properties>
                         <Property name="columns" type="int" value="20"/>
                         <Property name="rows" type="int" value="5"/>
@@ -1711,7 +1711,7 @@
                     <Property name="text" type="java.lang.String" value="Tiempo de Garantia:"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="jTextField1">
+                <Component class="javax.swing.JTextField" name="tf_tiempoOH">
                 </Component>
               </SubComponents>
             </Container>

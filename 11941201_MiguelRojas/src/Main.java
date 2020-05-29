@@ -143,27 +143,27 @@ public class Main extends javax.swing.JFrame {
         tf_pais = new javax.swing.JTextField();
         jPanel8 = new javax.swing.JPanel();
         jLabel51 = new javax.swing.JLabel();
-        tf_marcaR1 = new javax.swing.JTextField();
-        jb_colorR1 = new javax.swing.JButton();
+        tf_marcaOH = new javax.swing.JTextField();
+        jb_colorOH = new javax.swing.JButton();
         jLabel52 = new javax.swing.JLabel();
         jScrollPane6 = new javax.swing.JScrollPane();
-        ta_descripcionR1 = new javax.swing.JTextArea();
-        tf_calidadR1 = new javax.swing.JTextField();
+        ta_descripcionOH = new javax.swing.JTextArea();
+        tf_calidadOH = new javax.swing.JTextField();
         jLabel55 = new javax.swing.JLabel();
         jb_crearOH = new javax.swing.JButton();
-        cb_personaIngresadaR1 = new javax.swing.JComboBox<>();
+        cb_personaIngresadaOH = new javax.swing.JComboBox<>();
         jp_colorR1 = new javax.swing.JPanel();
         jLabel57 = new javax.swing.JLabel();
-        tf_tamanoR1 = new javax.swing.JTextField();
+        tf_tamanoOH = new javax.swing.JTextField();
         jLabel58 = new javax.swing.JLabel();
         jLabel59 = new javax.swing.JLabel();
-        jComboBox1 = new javax.swing.JComboBox<>();
+        cb_lugarOH = new javax.swing.JComboBox<>();
         jLabel60 = new javax.swing.JLabel();
         jLabel61 = new javax.swing.JLabel();
         jScrollPane7 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
+        ta_instruccionesOH = new javax.swing.JTextArea();
         jLabel62 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
+        tf_tiempoOH = new javax.swing.JTextField();
         jPanel9 = new javax.swing.JPanel();
         jPanel10 = new javax.swing.JPanel();
         jDialog3 = new javax.swing.JDialog();
@@ -1001,18 +1001,18 @@ public class Main extends javax.swing.JFrame {
 
         jLabel51.setText("Color:");
 
-        jb_colorR1.setText("Color");
-        jb_colorR1.addMouseListener(new java.awt.event.MouseAdapter() {
+        jb_colorOH.setText("Color");
+        jb_colorOH.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jb_colorR1MouseClicked(evt);
+                jb_colorOHMouseClicked(evt);
             }
         });
 
         jLabel52.setText("Descripcion:");
 
-        ta_descripcionR1.setColumns(20);
-        ta_descripcionR1.setRows(5);
-        jScrollPane6.setViewportView(ta_descripcionR1);
+        ta_descripcionOH.setColumns(20);
+        ta_descripcionOH.setRows(5);
+        jScrollPane6.setViewportView(ta_descripcionOH);
 
         jLabel55.setText("Persona Ingresada:");
 
@@ -1023,7 +1023,7 @@ public class Main extends javax.swing.JFrame {
             }
         });
 
-        cb_personaIngresadaR1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "-----" }));
+        cb_personaIngresadaOH.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "-----" }));
 
         jp_colorR1.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -1044,15 +1044,15 @@ public class Main extends javax.swing.JFrame {
 
         jLabel59.setText("Calidad:");
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Comedor", "Sala", "Baño", "Cocina" }));
+        cb_lugarOH.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Comedor", "Sala", "Baño", "Cocina" }));
 
         jLabel60.setText("Descripcion Lugar:");
 
         jLabel61.setText("Instrucciones:");
 
-        jTextArea1.setColumns(20);
-        jTextArea1.setRows(5);
-        jScrollPane7.setViewportView(jTextArea1);
+        ta_instruccionesOH.setColumns(20);
+        ta_instruccionesOH.setRows(5);
+        jScrollPane7.setViewportView(ta_instruccionesOH);
 
         jLabel62.setText("Tiempo de Garantia:");
 
@@ -1072,7 +1072,7 @@ public class Main extends javax.swing.JFrame {
                             .addGroup(jPanel8Layout.createSequentialGroup()
                                 .addComponent(jLabel51)
                                 .addGap(52, 52, 52)
-                                .addComponent(jb_colorR1)
+                                .addComponent(jb_colorOH)
                                 .addGap(18, 18, 18)
                                 .addComponent(jp_colorR1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(jPanel8Layout.createSequentialGroup()
@@ -1082,9 +1082,9 @@ public class Main extends javax.swing.JFrame {
                                     .addComponent(jLabel57))
                                 .addGap(34, 34, 34)
                                 .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                    .addComponent(tf_tamanoR1, javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(tf_marcaR1, javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(tf_calidadR1, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                    .addComponent(tf_tamanoOH, javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(tf_marcaOH, javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(tf_calidadOH, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE))))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 77, Short.MAX_VALUE)
                         .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel61)
@@ -1093,18 +1093,18 @@ public class Main extends javax.swing.JFrame {
                                     .addComponent(jLabel60)
                                     .addComponent(jLabel55))
                                 .addGap(81, 81, 81)
-                                .addComponent(cb_personaIngresadaR1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(cb_personaIngresadaOH, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                                 .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel8Layout.createSequentialGroup()
                                     .addComponent(jLabel62)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(tf_tiempoOH, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addComponent(jScrollPane7, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 264, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addGroup(jPanel8Layout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
                         .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(jb_crearOH)
-                            .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(cb_lugarOH, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addGap(27, 27, 27))
         );
         jPanel8Layout.setVerticalGroup(
@@ -1113,15 +1113,15 @@ public class Main extends javax.swing.JFrame {
                 .addGap(44, 44, 44)
                 .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel55)
-                    .addComponent(cb_personaIngresadaR1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(cb_personaIngresadaOH, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel51)
-                    .addComponent(jb_colorR1)
+                    .addComponent(jb_colorOH)
                     .addComponent(jp_colorR1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cb_lugarOH, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel60))
                 .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel8Layout.createSequentialGroup()
@@ -1132,13 +1132,13 @@ public class Main extends javax.swing.JFrame {
                         .addGap(42, 42, 42)
                         .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel57)
-                            .addComponent(tf_marcaR1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(tf_marcaOH, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
                         .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(tf_tamanoR1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(tf_tamanoOH, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel58)
                             .addComponent(jLabel62)
-                            .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(tf_tiempoOH, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(jPanel8Layout.createSequentialGroup()
                         .addGap(37, 37, 37)
                         .addComponent(jLabel61)
@@ -1147,7 +1147,7 @@ public class Main extends javax.swing.JFrame {
                 .addGap(21, 21, 21)
                 .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel59)
-                    .addComponent(tf_calidadR1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(tf_calidadOH, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jb_crearOH, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(29, Short.MAX_VALUE))
@@ -1880,12 +1880,115 @@ public class Main extends javax.swing.JFrame {
 
     }//GEN-LAST:event_jb_crearRopaMouseClicked
 
-    private void jb_colorR1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jb_colorR1MouseClicked
+    private void jb_colorOHMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jb_colorOHMouseClicked
         // TODO add your handling code here:
-    }//GEN-LAST:event_jb_colorR1MouseClicked
+    }//GEN-LAST:event_jb_colorOHMouseClicked
 
     private void jb_crearOHMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jb_crearOHMouseClicked
-        // TODO add your handling code here:
+        Color color = Color.WHITE;
+
+        String descripcion = null, marca = null, tamano = null, calidad = null,
+                lugar = null, instruccion = null;
+        int tiempo_garantia = 0;
+        boolean crear = true;
+
+        Persona p = null;
+
+        //Validar Entradas
+        //Descripcion
+        if (ta_descripcionOH.getText().isEmpty()) {
+            JOptionPane.showMessageDialog(jd_menuObjetos, "Falta la descripcion del objeto.");
+            crear = false;
+        } else {
+            descripcion = ta_descripcionOH.getText();
+        }
+
+        //Marca
+        if (tf_marcaOH.getText().isEmpty()) {
+            JOptionPane.showMessageDialog(jd_menuObjetos, "Falta la marca del objeto.");
+            crear = false;
+        } else {
+            marca = tf_marcaOH.getText();
+        }
+
+        //Tamaño
+        if (tf_tamanoOH.getText().isEmpty()) {
+            JOptionPane.showMessageDialog(jd_menuObjetos, "Falta el tamaño del objeto,");
+            crear = false;
+        } else {
+            tamano = tf_tamanoOH.getText();
+        }
+
+        //calidad
+        if (tf_calidadOH.getText().isEmpty()) {
+            JOptionPane.showMessageDialog(jd_menuObjetos, "Falta la calidad del objeto.");
+            crear = false;
+        } else {
+            calidad = tf_calidadOH.getText();
+        }
+
+        //Persona
+        if (cb_personaIngresadaOH.getSelectedIndex() == 0) {
+            JOptionPane.showMessageDialog(jd_menuObjetos, "Falta elegir persona que ingreso el producto.");
+            crear = false;
+        } else {
+            p = (Persona) cb_personaIngresadaOH.getSelectedItem();
+        }
+        //Lugar
+        lugar = cb_lugarOH.getSelectedItem().toString();
+        //Instrucciones
+        if (ta_instruccionesOH.getText().isEmpty()) {
+            JOptionPane.showMessageDialog(jd_menuObjetos, "Falta ingresar las instrucciones del objeto.");
+            crear = false;
+        } else {
+            instruccion = ta_instruccionesOH.getText();
+        }
+        
+        //tiempo garantia
+        if (tf_tiempoOH.getText().isEmpty()) {
+            JOptionPane.showMessageDialog(jd_menuObjetos, "Falta ingresar el tiempo de garantia.");
+            crear = false;
+        } else {
+            tiempo_garantia = Integer.parseInt(tf_tiempoOH.getText());
+        }
+        
+            
+        
+        //Color
+        color = jp_color.getBackground();
+
+        if (crear) {
+            String pw_sistema = JOptionPane.showInputDialog(jd_menuObjetos, "Ingrese contraseña del sistema: ");
+            if (pw_sistema.equals("unitec1234")) {
+
+                try {
+
+                    Objetos_Hogar oh = new Objetos_Hogar(lugar, instruccion, tiempo_garantia, color, 
+                            descripcion, marca, tamano, calidad, p);
+
+                    lista_objetos.add(oh);
+
+                    JOptionPane.showMessageDialog(jd_menuObjetos, "Se creo exitosamente el Objeto!!");
+                    //Reset las entradas
+                    jp_colorR1.setBackground(Color.WHITE);
+                    ta_descripcionOH.setText("");
+                    tf_marcaOH.setText("");
+                    tf_tamanoOH.setText("");
+                    tf_calidadOH.setText("");
+                    cb_personaIngresadaOH.setSelectedIndex(0);
+                    cb_lugarOH.setSelectedIndex(0);
+                    ta_instruccionesOH.setText("");
+                    tf_tiempoOH.setText("");
+
+                } catch (Exception e) {
+                    JOptionPane.showMessageDialog(jd_menuObjetos, "Ocurrio un error en el sistema.");
+                }
+            } else {
+                JOptionPane.showMessageDialog(jd_menuObjetos, "Contraseña del sistema incorrecta.");
+            }
+        }
+        
+        
     }//GEN-LAST:event_jb_crearOHMouseClicked
 
     /**
@@ -1930,11 +2033,11 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.ButtonGroup bg_sexoG;
     private javax.swing.ButtonGroup bg_sexoP;
     private javax.swing.JComboBox<String> cb_horario;
+    private javax.swing.JComboBox<String> cb_lugarOH;
     private javax.swing.JComboBox<String> cb_modElimPersonas;
+    private javax.swing.JComboBox<String> cb_personaIngresadaOH;
     private javax.swing.JComboBox<String> cb_personaIngresadaR;
-    private javax.swing.JComboBox<String> cb_personaIngresadaR1;
     private javax.swing.JComboBox<String> cb_personaIngresadaZ;
-    private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JDialog jDialog3;
     private javax.swing.JDialog jDialog4;
     private javax.swing.JLabel jLabel1;
@@ -2013,10 +2116,8 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane6;
     private javax.swing.JScrollPane jScrollPane7;
     private javax.swing.JTabbedPane jTabbedPane1;
-    private javax.swing.JTextArea jTextArea1;
-    private javax.swing.JTextField jTextField1;
+    private javax.swing.JButton jb_colorOH;
     private javax.swing.JButton jb_colorR;
-    private javax.swing.JButton jb_colorR1;
     private javax.swing.JButton jb_colorZ;
     private javax.swing.JButton jb_crearGerente;
     private javax.swing.JButton jb_crearOH;
@@ -2049,22 +2150,23 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JRadioButton rb_solteroGerente;
     private javax.swing.JRadioButton rb_solteroPersonal;
     private javax.swing.JRadioButton rb_sucursal;
+    private javax.swing.JTextArea ta_descripcionOH;
     private javax.swing.JTextArea ta_descripcionR;
-    private javax.swing.JTextArea ta_descripcionR1;
     private javax.swing.JTextArea ta_descripcionSuela;
     private javax.swing.JTextArea ta_descripcionZ;
+    private javax.swing.JTextArea ta_instruccionesOH;
     private javax.swing.JTabbedPane tb_menuPersonas;
     private javax.swing.JTextField tf_alturaGerente;
     private javax.swing.JTextField tf_alturaPersonal;
+    private javax.swing.JTextField tf_calidadOH;
     private javax.swing.JTextField tf_calidadR;
-    private javax.swing.JTextField tf_calidadR1;
     private javax.swing.JTextField tf_calidadZ;
     private javax.swing.JTextField tf_edadG;
     private javax.swing.JTextField tf_edadPersonal;
     private javax.swing.JTextField tf_identificacionG;
     private javax.swing.JTextField tf_identificacionPersonal;
+    private javax.swing.JTextField tf_marcaOH;
     private javax.swing.JTextField tf_marcaR;
-    private javax.swing.JTextField tf_marcaR1;
     private javax.swing.JTextField tf_marcaZ;
     private javax.swing.JTextField tf_nombreGerente;
     private javax.swing.JTextField tf_nombrePersonal;
@@ -2075,9 +2177,10 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JTextField tf_sueldo;
     private javax.swing.JTextField tf_talla;
     private javax.swing.JTextField tf_tallaZ;
+    private javax.swing.JTextField tf_tamanoOH;
     private javax.swing.JTextField tf_tamanoR;
-    private javax.swing.JTextField tf_tamanoR1;
     private javax.swing.JTextField tf_tamanoZ;
+    private javax.swing.JTextField tf_tiempoOH;
     private javax.swing.JTextField tf_tiempoP;
     private javax.swing.JTextField tf_tipoTela;
     private javax.swing.JTextField tf_usuario;
