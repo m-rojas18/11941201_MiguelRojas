@@ -1,4 +1,4 @@
-package lab5_miguelrojas;
+
 
 import java.util.ArrayList;
 
@@ -94,7 +94,7 @@ public class Persona {
 
     @Override
     public String toString() {
-        return "Persona{" + "identificacion=" + identificacion + ", nombre_persona=" + nombre_persona + ", edad_persona=" + edad_persona + ", sexo_persona=" + sexo_persona + ", estado_civil=" + estado_civil + ", altura=" + altura + ", peso=" + peso + ", lista_mensajes=" + lista_mensajes + '}';
+        return nombre_persona;
     }
     
     

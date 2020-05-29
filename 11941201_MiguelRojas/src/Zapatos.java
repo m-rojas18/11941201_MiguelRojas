@@ -1,4 +1,4 @@
-package lab5_miguelrojas;
+
 
 import java.awt.Color;
 

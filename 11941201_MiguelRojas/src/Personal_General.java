@@ -1,4 +1,4 @@
-package lab5_miguelrojas;
+
 
 public class Personal_General extends Persona{
 
@@ -50,7 +50,7 @@ public class Personal_General extends Persona{
 
     @Override
     public String toString() {
-        return "Personal_General{" + "ocupacion=" + ocupacion + ", horario=" + horario + ", tiempo_trabajado=" + tiempo_trabajado + ", sueldo=" + sueldo + '}';
+        return super.toString();
     }
     
     
