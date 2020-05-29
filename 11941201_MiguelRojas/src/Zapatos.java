@@ -1,19 +1,13 @@
 
-
 import java.awt.Color;
 
-public class Zapatos extends Objeto{
-    
-    
+public class Zapatos extends Objeto {
+
     private String talla;
     private String descripcion_suela;
     private int comodidad;
 
-    public Zapatos(Color color, String descripcion, String marca, String tamano, String calidad, Persona persona_ingreso) {
-        super(color, descripcion, marca, tamano, calidad, persona_ingreso);
-    }
-
-    public Zapatos(String talla, String descripcion_suela, int comodidad, Color color, String descripcion, String marca, String tamano, String calidad, Persona persona_ingreso) {
+    public Zapatos(String talla, String descripcion_suela, int comodidad, String color, String descripcion, String marca, String tamano, String calidad, Persona persona_ingreso) {
         super(color, descripcion, marca, tamano, calidad, persona_ingreso);
         this.talla = talla;
         this.descripcion_suela = descripcion_suela;
@@ -48,10 +42,5 @@ public class Zapatos extends Objeto{
     public String toString() {
         return "Zapatos{" + "talla=" + talla + ", descripcion_suela=" + descripcion_suela + ", comodidad=" + comodidad + '}';
     }
-    
-    
-    
-    
-    
-    
+
 }

@@ -97,7 +97,6 @@ public class Main extends javax.swing.JFrame {
         jTabbedPane1 = new javax.swing.JTabbedPane();
         jPanel6 = new javax.swing.JPanel();
         jLabel30 = new javax.swing.JLabel();
-        jb_colorZ = new javax.swing.JButton();
         jLabel31 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         ta_descripcionZ = new javax.swing.JTextArea();
@@ -118,16 +117,14 @@ public class Main extends javax.swing.JFrame {
         jLabel39 = new javax.swing.JLabel();
         js_comodidad = new javax.swing.JSpinner();
         jb_crearZapato = new javax.swing.JButton();
-        jp_color = new javax.swing.JPanel();
+        tf_color = new javax.swing.JTextField();
         jPanel7 = new javax.swing.JPanel();
         jScrollPane5 = new javax.swing.JScrollPane();
         ta_descripcionR = new javax.swing.JTextArea();
         jLabel43 = new javax.swing.JLabel();
-        jb_colorR = new javax.swing.JButton();
         tf_marcaR = new javax.swing.JTextField();
         jLabel45 = new javax.swing.JLabel();
         tf_tamanoR = new javax.swing.JTextField();
-        jp_colorR = new javax.swing.JPanel();
         cb_personaIngresadaR = new javax.swing.JComboBox<>();
         jb_crearRopa = new javax.swing.JButton();
         jLabel46 = new javax.swing.JLabel();
@@ -141,10 +138,10 @@ public class Main extends javax.swing.JFrame {
         tf_talla = new javax.swing.JTextField();
         tf_tipoTela = new javax.swing.JTextField();
         tf_pais = new javax.swing.JTextField();
+        tf_colorR = new javax.swing.JTextField();
         jPanel8 = new javax.swing.JPanel();
         jLabel51 = new javax.swing.JLabel();
         tf_marcaOH = new javax.swing.JTextField();
-        jb_colorOH = new javax.swing.JButton();
         jLabel52 = new javax.swing.JLabel();
         jScrollPane6 = new javax.swing.JScrollPane();
         ta_descripcionOH = new javax.swing.JTextArea();
@@ -152,7 +149,6 @@ public class Main extends javax.swing.JFrame {
         jLabel55 = new javax.swing.JLabel();
         jb_crearOH = new javax.swing.JButton();
         cb_personaIngresadaOH = new javax.swing.JComboBox<>();
-        jp_colorR1 = new javax.swing.JPanel();
         jLabel57 = new javax.swing.JLabel();
         tf_tamanoOH = new javax.swing.JTextField();
         jLabel58 = new javax.swing.JLabel();
@@ -164,8 +160,22 @@ public class Main extends javax.swing.JFrame {
         ta_instruccionesOH = new javax.swing.JTextArea();
         jLabel62 = new javax.swing.JLabel();
         tf_tiempoOH = new javax.swing.JTextField();
+        tf_colorOH = new javax.swing.JTextField();
         jPanel9 = new javax.swing.JPanel();
+        cb_modElim_objetos = new javax.swing.JComboBox<>();
+        jButton1 = new javax.swing.JButton();
+        jb_eliminarObjeto = new javax.swing.JButton();
+        jLabel53 = new javax.swing.JLabel();
         jPanel10 = new javax.swing.JPanel();
+        jScrollPane8 = new javax.swing.JScrollPane();
+        jt_zapatos = new javax.swing.JTable();
+        jLabel54 = new javax.swing.JLabel();
+        jPanel2 = new javax.swing.JPanel();
+        jScrollPane11 = new javax.swing.JScrollPane();
+        jt_ropa = new javax.swing.JTable();
+        jPanel11 = new javax.swing.JPanel();
+        jScrollPane9 = new javax.swing.JScrollPane();
+        jt_objetosHogar = new javax.swing.JTable();
         jDialog3 = new javax.swing.JDialog();
         jDialog4 = new javax.swing.JDialog();
         bg_sexoG = new javax.swing.ButtonGroup();
@@ -682,13 +692,6 @@ public class Main extends javax.swing.JFrame {
 
         jLabel30.setText("Color:");
 
-        jb_colorZ.setText("Color");
-        jb_colorZ.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jb_colorZMouseClicked(evt);
-            }
-        });
-
         jLabel31.setText("Descripcion:");
 
         ta_descripcionZ.setColumns(20);
@@ -726,19 +729,6 @@ public class Main extends javax.swing.JFrame {
             }
         });
 
-        jp_color.setBackground(new java.awt.Color(255, 255, 255));
-
-        javax.swing.GroupLayout jp_colorLayout = new javax.swing.GroupLayout(jp_color);
-        jp_color.setLayout(jp_colorLayout);
-        jp_colorLayout.setHorizontalGroup(
-            jp_colorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 47, Short.MAX_VALUE)
-        );
-        jp_colorLayout.setVerticalGroup(
-            jp_colorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 29, Short.MAX_VALUE)
-        );
-
         javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
         jPanel6.setLayout(jPanel6Layout);
         jPanel6Layout.setHorizontalGroup(
@@ -752,10 +742,8 @@ public class Main extends javax.swing.JFrame {
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel6Layout.createSequentialGroup()
                         .addComponent(jLabel30)
-                        .addGap(52, 52, 52)
-                        .addComponent(jb_colorZ)
-                        .addGap(18, 18, 18)
-                        .addComponent(jp_color, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(62, 62, 62)
+                        .addComponent(tf_color, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel6Layout.createSequentialGroup()
                         .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel34)
@@ -766,7 +754,7 @@ public class Main extends javax.swing.JFrame {
                             .addComponent(tf_tamanoZ, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 170, Short.MAX_VALUE)
                             .addComponent(tf_marcaZ, javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(tf_calidadZ))))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 51, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 43, Short.MAX_VALUE)
                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jb_crearZapato)
                     .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
@@ -798,8 +786,7 @@ public class Main extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel30)
-                    .addComponent(jb_colorZ)
-                    .addComponent(jp_color, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(tf_color, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel6Layout.createSequentialGroup()
                         .addGap(30, 30, 30)
@@ -834,7 +821,7 @@ public class Main extends javax.swing.JFrame {
                             .addComponent(js_comodidad, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(27, 27, 27)
                         .addComponent(jb_crearZapato, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(50, Short.MAX_VALUE))
+                .addContainerGap(41, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("Crear Zapatos", jPanel6);
@@ -845,27 +832,7 @@ public class Main extends javax.swing.JFrame {
 
         jLabel43.setText("Descripcion:");
 
-        jb_colorR.setText("Color");
-        jb_colorR.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jb_colorRMouseClicked(evt);
-            }
-        });
-
         jLabel45.setText("Color:");
-
-        jp_colorR.setBackground(new java.awt.Color(255, 255, 255));
-
-        javax.swing.GroupLayout jp_colorRLayout = new javax.swing.GroupLayout(jp_colorR);
-        jp_colorR.setLayout(jp_colorRLayout);
-        jp_colorRLayout.setHorizontalGroup(
-            jp_colorRLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 47, Short.MAX_VALUE)
-        );
-        jp_colorRLayout.setVerticalGroup(
-            jp_colorRLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 29, Short.MAX_VALUE)
-        );
 
         cb_personaIngresadaR.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "-----" }));
 
@@ -898,16 +865,6 @@ public class Main extends javax.swing.JFrame {
                 .addGap(54, 54, 54)
                 .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel7Layout.createSequentialGroup()
-                        .addComponent(jLabel43)
-                        .addGap(18, 18, 18)
-                        .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel7Layout.createSequentialGroup()
-                        .addComponent(jLabel45)
-                        .addGap(52, 52, 52)
-                        .addComponent(jb_colorR)
-                        .addGap(18, 18, 18)
-                        .addComponent(jp_colorR, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel7Layout.createSequentialGroup()
                         .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel48)
                             .addComponent(jLabel49)
@@ -916,7 +873,15 @@ public class Main extends javax.swing.JFrame {
                         .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                             .addComponent(tf_tamanoR, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 170, Short.MAX_VALUE)
                             .addComponent(tf_marcaR, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(tf_calidadR))))
+                            .addComponent(tf_calidadR)))
+                    .addGroup(jPanel7Layout.createSequentialGroup()
+                        .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel43)
+                            .addComponent(jLabel45))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(tf_colorR, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel7Layout.createSequentialGroup()
@@ -949,12 +914,11 @@ public class Main extends javax.swing.JFrame {
             .addGroup(jPanel7Layout.createSequentialGroup()
                 .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(jPanel7Layout.createSequentialGroup()
-                        .addGap(70, 70, 70)
+                        .addGap(65, 65, 65)
                         .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel45)
-                            .addComponent(jb_colorR)
-                            .addComponent(jp_colorR, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(30, 30, 30)
+                            .addComponent(tf_colorR, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(38, 38, 38)
                         .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel43)
                             .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -980,33 +944,25 @@ public class Main extends javax.swing.JFrame {
                 .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel50)
                     .addComponent(tf_marcaR, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(tf_tamanoR, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel49))
+                .addGap(21, 21, 21)
                 .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel7Layout.createSequentialGroup()
-                        .addGap(18, 18, 18)
-                        .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(tf_tamanoR, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel49))
-                        .addGap(21, 21, 21)
                         .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel48)
                             .addComponent(tf_calidadR, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addContainerGap(92, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel7Layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jb_crearRopa, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(80, Short.MAX_VALUE))
+                    .addGroup(jPanel7Layout.createSequentialGroup()
+                        .addComponent(jb_crearRopa, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGap(59, 59, 59))))
         );
 
         jTabbedPane1.addTab("Crear Ropa", jPanel7);
 
         jLabel51.setText("Color:");
-
-        jb_colorOH.setText("Color");
-        jb_colorOH.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jb_colorOHMouseClicked(evt);
-            }
-        });
 
         jLabel52.setText("Descripcion:");
 
@@ -1024,19 +980,6 @@ public class Main extends javax.swing.JFrame {
         });
 
         cb_personaIngresadaOH.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "-----" }));
-
-        jp_colorR1.setBackground(new java.awt.Color(255, 255, 255));
-
-        javax.swing.GroupLayout jp_colorR1Layout = new javax.swing.GroupLayout(jp_colorR1);
-        jp_colorR1.setLayout(jp_colorR1Layout);
-        jp_colorR1Layout.setHorizontalGroup(
-            jp_colorR1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 47, Short.MAX_VALUE)
-        );
-        jp_colorR1Layout.setVerticalGroup(
-            jp_colorR1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 29, Short.MAX_VALUE)
-        );
 
         jLabel57.setText("Marca:");
 
@@ -1066,16 +1009,6 @@ public class Main extends javax.swing.JFrame {
                         .addGap(38, 38, 38)
                         .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel8Layout.createSequentialGroup()
-                                .addComponent(jLabel52)
-                                .addGap(18, 18, 18)
-                                .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jPanel8Layout.createSequentialGroup()
-                                .addComponent(jLabel51)
-                                .addGap(52, 52, 52)
-                                .addComponent(jb_colorOH)
-                                .addGap(18, 18, 18)
-                                .addComponent(jp_colorR1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jPanel8Layout.createSequentialGroup()
                                 .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jLabel59)
                                     .addComponent(jLabel58)
@@ -1084,8 +1017,16 @@ public class Main extends javax.swing.JFrame {
                                 .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                                     .addComponent(tf_tamanoOH, javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(tf_marcaOH, javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(tf_calidadOH, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 77, Short.MAX_VALUE)
+                                    .addComponent(tf_calidadOH, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addGroup(jPanel8Layout.createSequentialGroup()
+                                .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel52)
+                                    .addComponent(jLabel51))
+                                .addGap(18, 18, 18)
+                                .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(tf_colorOH, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 69, Short.MAX_VALUE)
                         .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel61)
                             .addGroup(jPanel8Layout.createSequentialGroup()
@@ -1117,8 +1058,7 @@ public class Main extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel51)
-                    .addComponent(jb_colorOH)
-                    .addComponent(jp_colorR1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(tf_colorOH, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(cb_lugarOH, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1150,50 +1090,184 @@ public class Main extends javax.swing.JFrame {
                     .addComponent(tf_calidadOH, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jb_crearOH, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(29, Short.MAX_VALUE))
+                .addContainerGap(20, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("Crear ObjetoHogar", jPanel8);
+
+        cb_modElim_objetos.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "-----" }));
+
+        jButton1.setText("Modificar");
+
+        jb_eliminarObjeto.setText("Eliminar");
+        jb_eliminarObjeto.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jb_eliminarObjetoMouseClicked(evt);
+            }
+        });
+
+        jLabel53.setText("Modificar/Eliminar Objetos");
 
         javax.swing.GroupLayout jPanel9Layout = new javax.swing.GroupLayout(jPanel9);
         jPanel9.setLayout(jPanel9Layout);
         jPanel9Layout.setHorizontalGroup(
             jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 778, Short.MAX_VALUE)
+            .addGroup(jPanel9Layout.createSequentialGroup()
+                .addGap(96, 96, 96)
+                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel53)
+                    .addGroup(jPanel9Layout.createSequentialGroup()
+                        .addComponent(cb_modElim_objetos, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(203, 203, 203)
+                        .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jb_eliminarObjeto, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jButton1))))
+                .addContainerGap(235, Short.MAX_VALUE))
         );
         jPanel9Layout.setVerticalGroup(
             jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 464, Short.MAX_VALUE)
+            .addGroup(jPanel9Layout.createSequentialGroup()
+                .addGap(51, 51, 51)
+                .addComponent(jLabel53)
+                .addGap(46, 46, 46)
+                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(cb_modElim_objetos, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(33, 33, 33)
+                .addComponent(jb_eliminarObjeto, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(177, Short.MAX_VALUE))
         );
 
-        jTabbedPane1.addTab("tab4", jPanel9);
+        jTabbedPane1.addTab("Modificar/Eliminar", jPanel9);
+
+        jt_zapatos.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "Color", "Marca", "Tamaño", "Calidad", "Persona", "Talla", "Comodidad "
+            }
+        ) {
+            Class[] types = new Class [] {
+                java.lang.String.class, java.lang.String.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.String.class
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+        });
+        jScrollPane8.setViewportView(jt_zapatos);
+
+        jLabel54.setText("Lista de Zapatos");
 
         javax.swing.GroupLayout jPanel10Layout = new javax.swing.GroupLayout(jPanel10);
         jPanel10.setLayout(jPanel10Layout);
         jPanel10Layout.setHorizontalGroup(
             jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 778, Short.MAX_VALUE)
+            .addGroup(jPanel10Layout.createSequentialGroup()
+                .addGap(53, 53, 53)
+                .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel54)
+                    .addComponent(jScrollPane8, javax.swing.GroupLayout.PREFERRED_SIZE, 617, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(100, Short.MAX_VALUE))
         );
         jPanel10Layout.setVerticalGroup(
             jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 464, Short.MAX_VALUE)
+            .addGroup(jPanel10Layout.createSequentialGroup()
+                .addGap(21, 21, 21)
+                .addComponent(jLabel54)
+                .addGap(49, 49, 49)
+                .addComponent(jScrollPane8, javax.swing.GroupLayout.PREFERRED_SIZE, 216, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(150, Short.MAX_VALUE))
         );
 
-        jTabbedPane1.addTab("tab5", jPanel10);
+        jTabbedPane1.addTab("Listar Zapatos", jPanel10);
+
+        jt_ropa.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "Color", "Marca", "Tamano", "Calidad", "Persona", "Talla", "Tipo de Tela", "Pais"
+            }
+        ) {
+            Class[] types = new Class [] {
+                java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+        });
+        jScrollPane11.setViewportView(jt_ropa);
+
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(65, 65, 65)
+                .addComponent(jScrollPane11, javax.swing.GroupLayout.PREFERRED_SIZE, 573, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(132, Short.MAX_VALUE))
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(102, 102, 102)
+                .addComponent(jScrollPane11, javax.swing.GroupLayout.PREFERRED_SIZE, 216, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(134, Short.MAX_VALUE))
+        );
+
+        jTabbedPane1.addTab("Listar Ropa", jPanel2);
+
+        jt_objetosHogar.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "Color", "Marca", "Calidad", "Persona", "Lugar", "Tiempo Garantia"
+            }
+        ) {
+            Class[] types = new Class [] {
+                java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+        });
+        jScrollPane9.setViewportView(jt_objetosHogar);
+
+        javax.swing.GroupLayout jPanel11Layout = new javax.swing.GroupLayout(jPanel11);
+        jPanel11.setLayout(jPanel11Layout);
+        jPanel11Layout.setHorizontalGroup(
+            jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel11Layout.createSequentialGroup()
+                .addGap(84, 84, 84)
+                .addComponent(jScrollPane9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(232, Short.MAX_VALUE))
+        );
+        jPanel11Layout.setVerticalGroup(
+            jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel11Layout.createSequentialGroup()
+                .addGap(101, 101, 101)
+                .addComponent(jScrollPane9, javax.swing.GroupLayout.PREFERRED_SIZE, 212, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(139, Short.MAX_VALUE))
+        );
+
+        jTabbedPane1.addTab("Listar OH", jPanel11);
 
         javax.swing.GroupLayout jd_menuObjetosLayout = new javax.swing.GroupLayout(jd_menuObjetos.getContentPane());
         jd_menuObjetos.getContentPane().setLayout(jd_menuObjetosLayout);
         jd_menuObjetosLayout.setHorizontalGroup(
             jd_menuObjetosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jd_menuObjetosLayout.createSequentialGroup()
-                .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 799, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 18, Short.MAX_VALUE))
+                .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 791, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         jd_menuObjetosLayout.setVerticalGroup(
             jd_menuObjetosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jd_menuObjetosLayout.createSequentialGroup()
-                .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 510, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 15, Short.MAX_VALUE))
+            .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 498, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         javax.swing.GroupLayout jDialog3Layout = new javax.swing.GroupLayout(jDialog3.getContentPane());
@@ -1601,16 +1675,23 @@ public class Main extends javax.swing.JFrame {
     }//GEN-LAST:event_jn_menuObjetosMouseClicked
 
     private void jb_crearZapatoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jb_crearZapatoMouseClicked
-        Color color = Color.WHITE;
 
         String descripcion = null, marca = null, tamano = null, calidad = null,
-                talla = null, descipcion_suela = null;
+                talla = null, descipcion_suela = null , color = null;
         int comodidad = 0;
         boolean crear = true;
 
         Persona p = null;
 
         //Validar Entradas
+        //Color
+        
+        if (tf_color.getText().isEmpty()) {
+            JOptionPane.showMessageDialog(jd_menuObjetos, "Falta el color del objeto.");
+            crear = false;
+        } else {
+            color = tf_color.getText();
+        }
         //Descripcion
         if (ta_descripcionZ.getText().isEmpty()) {
             JOptionPane.showMessageDialog(jd_menuObjetos, "Falta la descripcion del objeto.");
@@ -1669,8 +1750,6 @@ public class Main extends javax.swing.JFrame {
 
         //Comodidad
         comodidad = (int) js_comodidad.getValue();
-        //Color
-        color = jp_color.getBackground();
 
         if (crear) {
             String pw_sistema = JOptionPane.showInputDialog(jd_menuObjetos, "Ingrese contraseña del sistema: ");
@@ -1682,10 +1761,15 @@ public class Main extends javax.swing.JFrame {
                             color, descripcion, marca, tamano, calidad, p);
 
                     lista_objetos.add(z);
+                    //Agregar a Combo Box
+                    refrescarComboBoxModElimObjetos();
+                    //Agregar a Tabla
+                    refrescarTablaZapato();
 
                     JOptionPane.showMessageDialog(jd_menuObjetos, "Se creo exitosamente el Objeto!!");
                     //Reset las entradas
-                    jp_color.setBackground(Color.WHITE);
+                    //jp_color.setBackground(Color.WHITE);
+                    tf_color.setText("");
                     ta_descripcionZ.setText("");
                     tf_marcaZ.setText("");
                     tf_tamanoZ.setText("");
@@ -1703,13 +1787,6 @@ public class Main extends javax.swing.JFrame {
             }
         }
     }//GEN-LAST:event_jb_crearZapatoMouseClicked
-
-    private void jb_colorZMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jb_colorZMouseClicked
-        // TODO add your handling code here:
-        //Color
-        Color color = JColorChooser.showDialog(jd_menuObjetos, "Eliga un color", Color.yellow);
-        jp_color.setBackground(color);
-    }//GEN-LAST:event_jb_colorZMouseClicked
 
     private void jb_eliminarPersonaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jb_eliminarPersonaMouseClicked
 
@@ -1766,21 +1843,22 @@ public class Main extends javax.swing.JFrame {
 
     }//GEN-LAST:event_jb_modificarPersonaMouseClicked
 
-    private void jb_colorRMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jb_colorRMouseClicked
-        Color c = JColorChooser.showDialog(jd_menuObjetos, "Eliga un color", Color.yellow);
-        jp_colorR.setBackground(c);
-    }//GEN-LAST:event_jb_colorRMouseClicked
-
     private void jb_crearRopaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jb_crearRopaMouseClicked
-        Color color = Color.WHITE;
 
         String descripcion = null, marca = null, tamano = null, calidad = null,
-                talla_r = null, tipo_tella = null, pais = null;
+                talla_r = null, tipo_tella = null, pais = null, color = null;
         boolean crear = true;
 
         Persona p = null;
 
         //Validar Entradas
+        //Color
+        if (tf_colorR.getText().isEmpty()) {
+            JOptionPane.showMessageDialog(jd_menuObjetos, "Falta el color del objeto.");
+            crear = false;
+        } else {
+            color = tf_colorR.getText();
+        }
         //Descripcion
         if (ta_descripcionR.getText().isEmpty()) {
             JOptionPane.showMessageDialog(jd_menuObjetos, "Falta la descripcion del objeto.");
@@ -1844,8 +1922,6 @@ public class Main extends javax.swing.JFrame {
         } else {
             pais = tf_pais.getText();
         }
-        //Color
-        color = jp_color.getBackground();
 
         if (crear) {
             String pw_sistema = JOptionPane.showInputDialog(jd_menuObjetos, "Ingrese contraseña del sistema: ");
@@ -1856,10 +1932,13 @@ public class Main extends javax.swing.JFrame {
                     Ropa r = new Ropa(talla_r, tipo_tella, pais, color, descripcion, marca, tamano, calidad, p);
 
                     lista_objetos.add(r);
-
+                    //Add Combo Box
+                    refrescarComboBoxModElimObjetos();
+                    //Add a tabla
+                    refrescarTablaRopa();
                     JOptionPane.showMessageDialog(jd_menuObjetos, "Se creo exitosamente el Objeto!!");
                     //Reset las entradas
-                    jp_colorR.setBackground(Color.WHITE);
+                    tf_colorR.setText("");
                     ta_descripcionR.setText("");
                     tf_marcaR.setText("");
                     tf_tamanoR.setText("");
@@ -1880,21 +1959,22 @@ public class Main extends javax.swing.JFrame {
 
     }//GEN-LAST:event_jb_crearRopaMouseClicked
 
-    private void jb_colorOHMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jb_colorOHMouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jb_colorOHMouseClicked
-
     private void jb_crearOHMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jb_crearOHMouseClicked
-        Color color = Color.WHITE;
-
         String descripcion = null, marca = null, tamano = null, calidad = null,
-                lugar = null, instruccion = null;
+                lugar = null, instruccion = null, color = null;
         int tiempo_garantia = 0;
         boolean crear = true;
 
         Persona p = null;
 
         //Validar Entradas
+        //Color
+        if (tf_colorOH.getText().isEmpty()) {
+            JOptionPane.showMessageDialog(jd_menuObjetos, "Falta el color del objeto");
+            crear = false;
+        } else {
+            color = tf_colorOH.getText();
+        }
         //Descripcion
         if (ta_descripcionOH.getText().isEmpty()) {
             JOptionPane.showMessageDialog(jd_menuObjetos, "Falta la descripcion del objeto.");
@@ -1943,7 +2023,7 @@ public class Main extends javax.swing.JFrame {
         } else {
             instruccion = ta_instruccionesOH.getText();
         }
-        
+
         //tiempo garantia
         if (tf_tiempoOH.getText().isEmpty()) {
             JOptionPane.showMessageDialog(jd_menuObjetos, "Falta ingresar el tiempo de garantia.");
@@ -1951,26 +2031,25 @@ public class Main extends javax.swing.JFrame {
         } else {
             tiempo_garantia = Integer.parseInt(tf_tiempoOH.getText());
         }
-        
-            
-        
-        //Color
-        color = jp_color.getBackground();
 
+        //Color
         if (crear) {
             String pw_sistema = JOptionPane.showInputDialog(jd_menuObjetos, "Ingrese contraseña del sistema: ");
             if (pw_sistema.equals("unitec1234")) {
 
                 try {
 
-                    Objetos_Hogar oh = new Objetos_Hogar(lugar, instruccion, tiempo_garantia, color, 
+                    Objetos_Hogar oh = new Objetos_Hogar(lugar, instruccion, tiempo_garantia, color,
                             descripcion, marca, tamano, calidad, p);
 
                     lista_objetos.add(oh);
+                    //Add a Combo Box
+                    //Add a tabla
+                    refrescarTablaOH();
 
                     JOptionPane.showMessageDialog(jd_menuObjetos, "Se creo exitosamente el Objeto!!");
                     //Reset las entradas
-                    jp_colorR1.setBackground(Color.WHITE);
+                    tf_colorOH.setText("");
                     ta_descripcionOH.setText("");
                     tf_marcaOH.setText("");
                     tf_tamanoOH.setText("");
@@ -1987,9 +2066,40 @@ public class Main extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(jd_menuObjetos, "Contraseña del sistema incorrecta.");
             }
         }
-        
-        
+
+
     }//GEN-LAST:event_jb_crearOHMouseClicked
+
+    private void jb_eliminarObjetoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jb_eliminarObjetoMouseClicked
+
+        int op_elim = cb_modElim_objetos.getSelectedIndex() - 1;
+
+        if (cb_modElim_objetos.getSelectedIndex() > 0) {
+            String pw_sistema = JOptionPane.showInputDialog(jd_menuObjetos, "Ingrese contraseña del sistema: ");
+            if (pw_sistema.equals("unitec1234")) {
+
+                Objeto objeto = lista_objetos.get(op_elim);
+
+                lista_objetos.remove(op_elim);
+                refrescarComboBoxModElimObjetos();
+                JOptionPane.showMessageDialog(jd_menuObjetos, "Se elimino exitosamente el objeto.");
+                if (objeto instanceof Ropa) {
+                    
+                    refrescarTablaRopa();
+                } else if (objeto instanceof Zapatos) {
+                    refrescarTablaZapato();
+                } else {
+                    refrescarTablaOH();
+                }
+
+            } else {
+                JOptionPane.showMessageDialog(jd_menuObjetos, "Contraseña del sistema incorrecta.");
+            }
+
+        } else {
+            JOptionPane.showMessageDialog(jd_menuObjetos, "Eliga un objeto valido.");
+        }
+    }//GEN-LAST:event_jb_eliminarObjetoMouseClicked
 
     /**
      * @param args the command line arguments
@@ -2035,9 +2145,11 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> cb_horario;
     private javax.swing.JComboBox<String> cb_lugarOH;
     private javax.swing.JComboBox<String> cb_modElimPersonas;
+    private javax.swing.JComboBox<String> cb_modElim_objetos;
     private javax.swing.JComboBox<String> cb_personaIngresadaOH;
     private javax.swing.JComboBox<String> cb_personaIngresadaR;
     private javax.swing.JComboBox<String> cb_personaIngresadaZ;
+    private javax.swing.JButton jButton1;
     private javax.swing.JDialog jDialog3;
     private javax.swing.JDialog jDialog4;
     private javax.swing.JLabel jLabel1;
@@ -2088,6 +2200,8 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel50;
     private javax.swing.JLabel jLabel51;
     private javax.swing.JLabel jLabel52;
+    private javax.swing.JLabel jLabel53;
+    private javax.swing.JLabel jLabel54;
     private javax.swing.JLabel jLabel55;
     private javax.swing.JLabel jLabel57;
     private javax.swing.JLabel jLabel58;
@@ -2101,6 +2215,8 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel10;
+    private javax.swing.JPanel jPanel11;
+    private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
@@ -2109,21 +2225,22 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel8;
     private javax.swing.JPanel jPanel9;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane11;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JScrollPane jScrollPane5;
     private javax.swing.JScrollPane jScrollPane6;
     private javax.swing.JScrollPane jScrollPane7;
+    private javax.swing.JScrollPane jScrollPane8;
+    private javax.swing.JScrollPane jScrollPane9;
     private javax.swing.JTabbedPane jTabbedPane1;
-    private javax.swing.JButton jb_colorOH;
-    private javax.swing.JButton jb_colorR;
-    private javax.swing.JButton jb_colorZ;
     private javax.swing.JButton jb_crearGerente;
     private javax.swing.JButton jb_crearOH;
     private javax.swing.JButton jb_crearPersonal;
     private javax.swing.JButton jb_crearRopa;
     private javax.swing.JButton jb_crearZapato;
+    private javax.swing.JButton jb_eliminarObjeto;
     private javax.swing.JButton jb_eliminarPersona;
     private javax.swing.JButton jb_envioMensajes;
     private javax.swing.JButton jb_listaContactos;
@@ -2132,13 +2249,13 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JDialog jd_MenuPersonas;
     private javax.swing.JDialog jd_menuObjetos;
     private javax.swing.JButton jn_menuObjetos;
-    private javax.swing.JPanel jp_color;
-    private javax.swing.JPanel jp_colorR;
-    private javax.swing.JPanel jp_colorR1;
     private javax.swing.JPanel jp_crearGerente;
     private javax.swing.JSpinner js_comodidad;
     private javax.swing.JTable jt_listaGerentes;
     private javax.swing.JTable jt_listapersonalGeneral;
+    private javax.swing.JTable jt_objetosHogar;
+    private javax.swing.JTable jt_ropa;
+    private javax.swing.JTable jt_zapatos;
     private javax.swing.JPasswordField pf_passwordGerente;
     private javax.swing.JRadioButton rb_F_Gerente;
     private javax.swing.JRadioButton rb_F_Personal;
@@ -2161,6 +2278,9 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JTextField tf_calidadOH;
     private javax.swing.JTextField tf_calidadR;
     private javax.swing.JTextField tf_calidadZ;
+    private javax.swing.JTextField tf_color;
+    private javax.swing.JTextField tf_colorOH;
+    private javax.swing.JTextField tf_colorR;
     private javax.swing.JTextField tf_edadG;
     private javax.swing.JTextField tf_edadPersonal;
     private javax.swing.JTextField tf_identificacionG;
@@ -2241,5 +2361,80 @@ public class Main extends javax.swing.JFrame {
         cb_modElimPersonas.setModel(model);
 
     }
+
+    public void refrescarComboBoxModElimObjetos() {
+        DefaultComboBoxModel model = new DefaultComboBoxModel();
+
+        for (Objeto o : lista_objetos) {
+            model.addElement(o);
+        }
+        cb_modElim_objetos.setModel(model);
+
+    }
+
+    public void refrescarTablaOH() {
+        jt_objetosHogar.setModel(new javax.swing.table.DefaultTableModel(
+                new Object[][]{},
+                new String[]{
+                    "Color", "Marca", "Calidad", "Persona", "Lugar", "Tiempo Garantia"
+                }
+        ));
+
+        DefaultTableModel modelo = (DefaultTableModel) jt_objetosHogar.getModel();
+        for (Objeto o : lista_objetos) {
+            if (o instanceof Objetos_Hogar) {
+                Object[] obj = {o.getColor(), o.getMarca(), o.getCalidad(), o.getPersona_ingreso(),
+                    ((Objetos_Hogar) o).getDescripcion_lugar(),
+                    ((Objetos_Hogar) o).getTiempo_garantia()};
+                modelo.addRow(obj);
+            }
+        }
+
+        jt_objetosHogar.setModel(modelo);
+    }
+
+    public void refrescarTablaRopa() {
+        jt_ropa.setModel(new javax.swing.table.DefaultTableModel(
+                new Object[][]{},
+                new String[]{
+                    "Color", "Marca", "Tamano", "Calidad", "Persona", "Talla", "Tipo de Tela", "Pais"
+                }
+        ));
+        DefaultTableModel modelo = (DefaultTableModel) jt_zapatos.getModel();
+
+        for (Objeto o : lista_objetos) {
+            if (o instanceof Ropa) {
+                Object[] obj = {o.getColor(), o.getMarca(), o.getTamano(), o.getCalidad(), o.getPersona_ingreso(), ((Ropa) o).getTalla(),
+                    ((Ropa) o).getTipo_tela(), ((Ropa) o).getPais_elaborado()};
+                modelo.addRow(obj);
+            }
+        }
+
+        jt_ropa.setModel(modelo);
+    }
+
+    public void refrescarTablaZapato() {
+
+        jt_zapatos.setModel(new javax.swing.table.DefaultTableModel(
+                new Object[][]{},
+                new String[]{
+                    "Color", "Marca", "Tamaño", "Calidad", "Persona", "Talla", "Comodidad "
+                }
+        ));
+
+        DefaultTableModel modelo = (DefaultTableModel) jt_zapatos.getModel();
+
+        for (Objeto o : lista_objetos) {
+            if (o instanceof Zapatos) {
+                Object[] obj = {o.getColor(), o.getMarca(), o.getTamano(), o.getCalidad(),
+                    o.getPersona_ingreso(), ((Zapatos) o).getTalla(), ((Zapatos) o).getComodidad()};
+                modelo.addRow(obj);
+            }
+        }
+
+        jt_zapatos.setModel(modelo);
+    }
+    
+
 
 }

@@ -5,14 +5,14 @@ import java.awt.Color;
 public class Objeto {
 
 
-    private Color color;
+    private String color;
     private String descripcion;
     private String marca;
     private String tamano;
     private String calidad;
     private Persona persona_ingreso;
 
-    public Objeto(Color color, String descripcion, String marca, String tamano, String calidad, Persona persona_ingreso) {
+    public Objeto(String color, String descripcion, String marca, String tamano, String calidad, Persona persona_ingreso) {
         this.color = color;
         this.descripcion = descripcion;
         this.marca = marca;
@@ -21,11 +21,11 @@ public class Objeto {
         this.persona_ingreso = persona_ingreso;
     }
 
-    public Color getColor() {
+    public String getColor() {
         return color;
     }
 
-    public void setColor(Color color) {
+    public void setColor(String color) {
         this.color = color;
     }
 

@@ -9,11 +9,7 @@ public class Ropa extends Objeto{
     private String tipo_tela;
     private String pais_elaborado;
 
-    public Ropa(Color color, String descripcion, String marca, String tamano, String calidad, Persona persona_ingreso) {
-        super(color, descripcion, marca, tamano, calidad, persona_ingreso);
-    }
-
-    public Ropa(String talla, String tipo_tela, String pais_elaborado, Color color, String descripcion, String marca, String tamano, String calidad, Persona persona_ingreso) {
+    public Ropa(String talla, String tipo_tela, String pais_elaborado, String color, String descripcion, String marca, String tamano, String calidad, Persona persona_ingreso) {
         super(color, descripcion, marca, tamano, calidad, persona_ingreso);
         this.talla = talla;
         this.tipo_tela = tipo_tela;
