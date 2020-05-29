@@ -83,6 +83,10 @@ public class Persona {
     public void setPeso(int peso) {
         this.peso = peso;
     }
+    
+    public void setMensaje(Mensaje m){
+        this.lista_mensajes.add(m);
+    }
 
     public ArrayList<Mensaje> getLista_mensajes() {
         return lista_mensajes;

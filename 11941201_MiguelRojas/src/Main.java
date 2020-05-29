@@ -176,8 +176,20 @@ public class Main extends javax.swing.JFrame {
         jPanel11 = new javax.swing.JPanel();
         jScrollPane9 = new javax.swing.JScrollPane();
         jt_objetosHogar = new javax.swing.JTable();
-        jDialog3 = new javax.swing.JDialog();
-        jDialog4 = new javax.swing.JDialog();
+        jd_EnvioMensajes = new javax.swing.JDialog();
+        jTabbedPane3 = new javax.swing.JTabbedPane();
+        jPanel14 = new javax.swing.JPanel();
+        jLabel63 = new javax.swing.JLabel();
+        jScrollPane10 = new javax.swing.JScrollPane();
+        ta_mensaje = new javax.swing.JTextArea();
+        cb_emisor = new javax.swing.JComboBox<>();
+        cb_receptor = new javax.swing.JComboBox<>();
+        jButton2 = new javax.swing.JButton();
+        jLabel66 = new javax.swing.JLabel();
+        jLabel67 = new javax.swing.JLabel();
+        jPanel15 = new javax.swing.JPanel();
+        jScrollPane12 = new javax.swing.JScrollPane();
+        jt_historialMensajes = new javax.swing.JTable();
         bg_sexoG = new javax.swing.ButtonGroup();
         bg_estadoCivilG = new javax.swing.ButtonGroup();
         bg_cargo = new javax.swing.ButtonGroup();
@@ -1270,26 +1282,130 @@ public class Main extends javax.swing.JFrame {
             .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 498, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
-        javax.swing.GroupLayout jDialog3Layout = new javax.swing.GroupLayout(jDialog3.getContentPane());
-        jDialog3.getContentPane().setLayout(jDialog3Layout);
-        jDialog3Layout.setHorizontalGroup(
-            jDialog3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+        jLabel63.setText("Envio de Mensajes");
+
+        ta_mensaje.setColumns(20);
+        ta_mensaje.setRows(5);
+        jScrollPane10.setViewportView(ta_mensaje);
+
+        cb_emisor.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "-----" }));
+
+        cb_receptor.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "-----" }));
+
+        jButton2.setText("Enviar");
+        jButton2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton2MouseClicked(evt);
+            }
+        });
+
+        jLabel66.setText("Persona Enviando:");
+
+        jLabel67.setText("Receptor:");
+
+        javax.swing.GroupLayout jPanel14Layout = new javax.swing.GroupLayout(jPanel14);
+        jPanel14.setLayout(jPanel14Layout);
+        jPanel14Layout.setHorizontalGroup(
+            jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel14Layout.createSequentialGroup()
+                .addGap(39, 39, 39)
+                .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel14Layout.createSequentialGroup()
+                        .addComponent(jLabel66)
+                        .addGap(56, 56, 56)
+                        .addComponent(cb_emisor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(jPanel14Layout.createSequentialGroup()
+                        .addComponent(jLabel63)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(jPanel14Layout.createSequentialGroup()
+                        .addComponent(jScrollPane10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel14Layout.createSequentialGroup()
+                                .addGap(65, 65, 65)
+                                .addComponent(jLabel67)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 39, Short.MAX_VALUE)
+                                .addComponent(cb_receptor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPanel14Layout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(23, 23, 23))))
         );
-        jDialog3Layout.setVerticalGroup(
-            jDialog3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+        jPanel14Layout.setVerticalGroup(
+            jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel14Layout.createSequentialGroup()
+                .addGap(40, 40, 40)
+                .addComponent(jLabel63)
+                .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel14Layout.createSequentialGroup()
+                        .addGap(49, 49, 49)
+                        .addComponent(jScrollPane10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(44, 44, 44)
+                        .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(cb_emisor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel66)))
+                    .addGroup(jPanel14Layout.createSequentialGroup()
+                        .addGap(41, 41, 41)
+                        .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(cb_receptor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel67))
+                        .addGap(40, 40, 40)
+                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(90, Short.MAX_VALUE))
         );
 
-        javax.swing.GroupLayout jDialog4Layout = new javax.swing.GroupLayout(jDialog4.getContentPane());
-        jDialog4.getContentPane().setLayout(jDialog4Layout);
-        jDialog4Layout.setHorizontalGroup(
-            jDialog4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+        jTabbedPane3.addTab("Enviar Mensaje", jPanel14);
+
+        jt_historialMensajes.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "Emisor", "Mensaje", "Receptor"
+            }
+        ) {
+            Class[] types = new Class [] {
+                java.lang.String.class, java.lang.String.class, java.lang.String.class
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+        });
+        jScrollPane12.setViewportView(jt_historialMensajes);
+
+        javax.swing.GroupLayout jPanel15Layout = new javax.swing.GroupLayout(jPanel15);
+        jPanel15.setLayout(jPanel15Layout);
+        jPanel15Layout.setHorizontalGroup(
+            jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel15Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jScrollPane12, javax.swing.GroupLayout.DEFAULT_SIZE, 553, Short.MAX_VALUE)
+                .addContainerGap())
         );
-        jDialog4Layout.setVerticalGroup(
-            jDialog4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+        jPanel15Layout.setVerticalGroup(
+            jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel15Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jScrollPane12, javax.swing.GroupLayout.PREFERRED_SIZE, 226, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(200, 200, 200))
+        );
+
+        jTabbedPane3.addTab("Historial", jPanel15);
+
+        javax.swing.GroupLayout jd_EnvioMensajesLayout = new javax.swing.GroupLayout(jd_EnvioMensajes.getContentPane());
+        jd_EnvioMensajes.getContentPane().setLayout(jd_EnvioMensajesLayout);
+        jd_EnvioMensajesLayout.setHorizontalGroup(
+            jd_EnvioMensajesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jd_EnvioMensajesLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jTabbedPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 586, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
+        jd_EnvioMensajesLayout.setVerticalGroup(
+            jd_EnvioMensajesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jd_EnvioMensajesLayout.createSequentialGroup()
+                .addComponent(jTabbedPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 396, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -1314,6 +1430,11 @@ public class Main extends javax.swing.JFrame {
         jb_envioMensajes.setText("Lista de Contactos");
 
         jb_listaContactos.setText("Envio de Mensajes");
+        jb_listaContactos.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jb_listaContactosMouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -1484,6 +1605,7 @@ public class Main extends javax.swing.JFrame {
                     DefaultComboBoxModel modelo = (DefaultComboBoxModel) cb_modElimPersonas.getModel();
                     modelo.addElement(g);
                     refrescarTablaGerente();
+                    refrescarCBMensajes();
 
                     cb_modElimPersonas.setModel(modelo);
                     //Agregar a Tabla
@@ -1620,6 +1742,7 @@ public class Main extends javax.swing.JFrame {
                     DefaultComboBoxModel modelo = (DefaultComboBoxModel) cb_modElimPersonas.getModel();
                     modelo.addElement(pg);
                     refrescarTablaPersonal();
+                    refrescarCBMensajes();
 
                     cb_modElimPersonas.setModel(modelo);
                     //Add a tabla
@@ -1677,7 +1800,7 @@ public class Main extends javax.swing.JFrame {
     private void jb_crearZapatoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jb_crearZapatoMouseClicked
 
         String descripcion = null, marca = null, tamano = null, calidad = null,
-                talla = null, descipcion_suela = null , color = null;
+                talla = null, descipcion_suela = null, color = null;
         int comodidad = 0;
         boolean crear = true;
 
@@ -1685,7 +1808,6 @@ public class Main extends javax.swing.JFrame {
 
         //Validar Entradas
         //Color
-        
         if (tf_color.getText().isEmpty()) {
             JOptionPane.showMessageDialog(jd_menuObjetos, "Falta el color del objeto.");
             crear = false;
@@ -2084,7 +2206,7 @@ public class Main extends javax.swing.JFrame {
                 refrescarComboBoxModElimObjetos();
                 JOptionPane.showMessageDialog(jd_menuObjetos, "Se elimino exitosamente el objeto.");
                 if (objeto instanceof Ropa) {
-                    
+
                     refrescarTablaRopa();
                 } else if (objeto instanceof Zapatos) {
                     refrescarTablaZapato();
@@ -2100,6 +2222,71 @@ public class Main extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(jd_menuObjetos, "Eliga un objeto valido.");
         }
     }//GEN-LAST:event_jb_eliminarObjetoMouseClicked
+
+    private void jb_listaContactosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jb_listaContactosMouseClicked
+
+        if (lista_contactos.size() < 2) {
+            JOptionPane.showMessageDialog(this, "Deben haber minimo 2 personas para acceder a esta funcion.");
+        } else {
+            jd_EnvioMensajes.setModal(true);
+            jd_EnvioMensajes.pack();
+            jd_EnvioMensajes.setLocationRelativeTo(this);
+            jd_EnvioMensajes.setVisible(true);
+        }
+    }//GEN-LAST:event_jb_listaContactosMouseClicked
+
+    private void jButton2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2MouseClicked
+        // TODO add your handling code here:
+        String emisor = null, mensaje = null, receptor = null;
+        boolean enviar = true;
+
+        int op_receptor = cb_receptor.getSelectedIndex() - 1;
+        int op_emisor = cb_emisor.getSelectedIndex() - 1;
+        //Emisor
+        if (cb_emisor.getSelectedIndex() == 0) {
+            JOptionPane.showMessageDialog(jd_EnvioMensajes, "Ocupa elegir a la persona enviando el mensaje.");
+            enviar = false;
+        } else {
+            emisor = lista_contactos.get(op_emisor).getNombre_persona();
+        }
+
+        //Mensaje
+        if (ta_mensaje.getText().isEmpty()) {
+            JOptionPane.showMessageDialog(jd_EnvioMensajes, "No escribio un mensaje.");
+            enviar = false;
+        } else {
+            mensaje = ta_mensaje.getText();
+        }
+        //Receptor
+
+        if (cb_receptor.getSelectedIndex() == 0) {
+            JOptionPane.showMessageDialog(jd_EnvioMensajes, "Ocupa elegir a la persona recibiendo el mensaje.");
+            enviar = false;
+        } else {
+            receptor = lista_contactos.get(op_receptor).getNombre_persona();
+        }
+
+        if (enviar) {
+
+            Persona p_enviando = lista_contactos.get(op_emisor);
+            Persona p_receptor = lista_contactos.get(op_receptor);
+            
+            //Crear Objeto Mensaje
+            Mensaje m = new Mensaje(emisor, mensaje, receptor);
+            lista_mensajes.add(m);
+            //Agregar Mensajes a las Listas
+            p_enviando.setMensaje(m);
+            p_receptor.setMensaje(m);
+
+            JOptionPane.showMessageDialog(jd_EnvioMensajes, "Envio de Mensaje Exitoso!!");
+            cb_emisor.setSelectedIndex(0);
+            cb_receptor.setSelectedIndex(0);
+            ta_mensaje.setText("");
+            //Poner Mensajes en el Historial
+            //Add a Tabla
+            refrescarHistorial();
+        }
+    }//GEN-LAST:event_jButton2MouseClicked
 
     /**
      * @param args the command line arguments
@@ -2142,6 +2329,7 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.ButtonGroup bg_estadoCivilP;
     private javax.swing.ButtonGroup bg_sexoG;
     private javax.swing.ButtonGroup bg_sexoP;
+    private javax.swing.JComboBox<String> cb_emisor;
     private javax.swing.JComboBox<String> cb_horario;
     private javax.swing.JComboBox<String> cb_lugarOH;
     private javax.swing.JComboBox<String> cb_modElimPersonas;
@@ -2149,9 +2337,9 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> cb_personaIngresadaOH;
     private javax.swing.JComboBox<String> cb_personaIngresadaR;
     private javax.swing.JComboBox<String> cb_personaIngresadaZ;
+    private javax.swing.JComboBox<String> cb_receptor;
     private javax.swing.JButton jButton1;
-    private javax.swing.JDialog jDialog3;
-    private javax.swing.JDialog jDialog4;
+    private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -2210,12 +2398,17 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel60;
     private javax.swing.JLabel jLabel61;
     private javax.swing.JLabel jLabel62;
+    private javax.swing.JLabel jLabel63;
+    private javax.swing.JLabel jLabel66;
+    private javax.swing.JLabel jLabel67;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel10;
     private javax.swing.JPanel jPanel11;
+    private javax.swing.JPanel jPanel14;
+    private javax.swing.JPanel jPanel15;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
@@ -2225,7 +2418,9 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel8;
     private javax.swing.JPanel jPanel9;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane10;
     private javax.swing.JScrollPane jScrollPane11;
+    private javax.swing.JScrollPane jScrollPane12;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
@@ -2235,6 +2430,7 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane8;
     private javax.swing.JScrollPane jScrollPane9;
     private javax.swing.JTabbedPane jTabbedPane1;
+    private javax.swing.JTabbedPane jTabbedPane3;
     private javax.swing.JButton jb_crearGerente;
     private javax.swing.JButton jb_crearOH;
     private javax.swing.JButton jb_crearPersonal;
@@ -2246,11 +2442,13 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JButton jb_listaContactos;
     private javax.swing.JButton jb_menuPersonas;
     private javax.swing.JButton jb_modificarPersona;
+    private javax.swing.JDialog jd_EnvioMensajes;
     private javax.swing.JDialog jd_MenuPersonas;
     private javax.swing.JDialog jd_menuObjetos;
     private javax.swing.JButton jn_menuObjetos;
     private javax.swing.JPanel jp_crearGerente;
     private javax.swing.JSpinner js_comodidad;
+    private javax.swing.JTable jt_historialMensajes;
     private javax.swing.JTable jt_listaGerentes;
     private javax.swing.JTable jt_listapersonalGeneral;
     private javax.swing.JTable jt_objetosHogar;
@@ -2272,6 +2470,7 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JTextArea ta_descripcionSuela;
     private javax.swing.JTextArea ta_descripcionZ;
     private javax.swing.JTextArea ta_instruccionesOH;
+    private javax.swing.JTextArea ta_mensaje;
     private javax.swing.JTabbedPane tb_menuPersonas;
     private javax.swing.JTextField tf_alturaGerente;
     private javax.swing.JTextField tf_alturaPersonal;
@@ -2308,6 +2507,7 @@ public class Main extends javax.swing.JFrame {
 
     ArrayList<Persona> lista_contactos = new ArrayList();
     ArrayList<Objeto> lista_objetos = new ArrayList();
+    ArrayList<Mensaje> lista_mensajes = new ArrayList();
 
     public void refrescarTablaPersonal() {
         jt_listapersonalGeneral.setModel(new javax.swing.table.DefaultTableModel(new Object[][]{},
@@ -2434,7 +2634,35 @@ public class Main extends javax.swing.JFrame {
 
         jt_zapatos.setModel(modelo);
     }
-    
 
+    public void refrescarCBMensajes() {
+
+        DefaultComboBoxModel model1 = new DefaultComboBoxModel();
+
+        for (Persona p : lista_contactos) {
+            model1.addElement(p);
+        }
+
+        //Set Modelos
+        cb_emisor.setModel(model1);
+        cb_receptor.setModel(model1);
+
+    }
+    
+    public void refrescarHistorial(){
+        jt_historialMensajes.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {},
+            new String [] {
+                "Emisor", "Mensaje", "Receptor"}));
+        
+        DefaultTableModel model = (DefaultTableModel)jt_historialMensajes.getModel();
+        
+        for (Mensaje m : lista_mensajes) {
+            Object[] obj = {m.getEmisor(), m.getMensaje(), m.getReceptor()};
+            model.addRow(obj);
+        }
+        
+        jt_historialMensajes.setModel(model);
+    }
 
 }
