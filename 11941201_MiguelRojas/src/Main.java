@@ -656,7 +656,7 @@ public class Main extends javax.swing.JFrame {
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.String.class, java.lang.String.class, java.lang.Integer.class, java.lang.String.class, java.lang.String.class, java.lang.Double.class, java.lang.Integer.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
+                java.lang.String.class, java.lang.String.class, java.lang.Integer.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
             };
 
             public Class getColumnClass(int columnIndex) {
@@ -674,7 +674,7 @@ public class Main extends javax.swing.JFrame {
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.String.class, java.lang.String.class, java.lang.Integer.class, java.lang.String.class, java.lang.String.class, java.lang.Double.class, java.lang.Integer.class, java.lang.String.class, java.lang.String.class, java.lang.Integer.class, java.lang.Integer.class
+                java.lang.String.class, java.lang.String.class, java.lang.Integer.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.Integer.class, java.lang.Integer.class
             };
 
             public Class getColumnClass(int columnIndex) {
@@ -1146,6 +1146,11 @@ public class Main extends javax.swing.JFrame {
         cb_modElim_objetos.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "-----" }));
 
         jButton1.setText("Modificar");
+        jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton1MouseClicked(evt);
+            }
+        });
 
         jb_eliminarObjeto.setText("Eliminar");
         jb_eliminarObjeto.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -2231,7 +2236,8 @@ public class Main extends javax.swing.JFrame {
     private void jb_modificarPersonaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jb_modificarPersonaMouseClicked
 
         int op_mod = cb_modElimPersonas.getSelectedIndex() - 1;
-        String pw_sistema = JOptionPane.showInputDialog(jd_MenuPersonas, "Ingrese contraseña del sistema: ");
+        JOptionPane.showMessageDialog(jd_MenuPersonas,"No termine esta opcion. :(");
+        /*String pw_sistema = JOptionPane.showInputDialog(jd_MenuPersonas, "Ingrese contraseña del sistema: ");
 
         if (pw_sistema.equals("unitec1234")) {
 
@@ -2290,7 +2296,7 @@ public class Main extends javax.swing.JFrame {
         } else {
             JOptionPane.showMessageDialog(jd_MenuPersonas, "Contraseña del sistema incorrecta.");
 
-        }
+        }*/
 
 
     }//GEN-LAST:event_jb_modificarPersonaMouseClicked
@@ -2617,13 +2623,16 @@ public class Main extends javax.swing.JFrame {
 
     private void jb_eliminarContactoTablaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jb_eliminarContactoTablaMouseClicked
 
-        String pw_sistema = JOptionPane.showInputDialog(jd_menuObjetos, "Ingrese contraseña del sistema: ");
+        String pw_sistema = JOptionPane.showInputDialog(jd_listaContactos, "Ingrese contraseña del sistema: ");
         int opcion_tabla = jt_contactos.getSelectedRow();
         if (pw_sistema.equals("unitec1234")) {
 
             if (opcion_tabla >= 0) {
 
-                jt_contactos.removeRowSelectionInterval(opcion_tabla, opcion_tabla);
+                DefaultTableModel model = (DefaultTableModel)jt_contactos.getModel();
+                
+                model.removeRow(opcion_tabla);
+                jt_contactos.setModel(model);
                 JOptionPane.showMessageDialog(jd_listaContactos, "Se quito el objeto de la lista exitosamente!!");
             } else {
                 JOptionPane.showMessageDialog(jd_listaContactos, "Debe Elegir un contacto");
@@ -2671,6 +2680,11 @@ public class Main extends javax.swing.JFrame {
 
 
     }//GEN-LAST:event_jb_modGerenteMouseClicked
+
+    private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
+        // TODO add your handling code here:
+        JOptionPane.showMessageDialog(jd_menuObjetos,"No logre hacer esta funcion :(");
+    }//GEN-LAST:event_jButton1MouseClicked
 
     /**
      * @param args the command line arguments
@@ -2941,7 +2955,7 @@ public class Main extends javax.swing.JFrame {
         for (Persona p : lista_contactos) {
             if (p instanceof Personal_General) {
                 Object[] obj = {p.getIdentificacion(), p.getNombre_persona(), p.getEdad_persona(), p.getSexo_persona(),
-                    p.getEstado_civil(), p.getAltura(), p.getPeso(), ((Personal_General) p).getOcupacion(), ((Personal_General) p).getHorario(),
+                    p.getEstado_civil(), p.getAltura() + "m", p.getPeso() + "kg", ((Personal_General) p).getOcupacion(), ((Personal_General) p).getHorario(),
                     ((Personal_General) p).getTiempo_trabajado(), ((Personal_General) p).getSueldo()};
                 modelo.addRow(obj);
             }
@@ -2963,7 +2977,7 @@ public class Main extends javax.swing.JFrame {
         for (Persona p : lista_contactos) {
             if (p instanceof Gerente) {
                 Object[] obj = {p.getIdentificacion(), p.getNombre_persona(), p.getEdad_persona(), p.getSexo_persona(),
-                    p.getEstado_civil(), p.getAltura(), p.getPeso(), ((Gerente) p).getUsuario(), ((Gerente) p).getPassword(),
+                    p.getEstado_civil(), p.getAltura() + "m", p.getPeso() + "kg", ((Gerente) p).getUsuario(), ((Gerente) p).getPassword(),
                     ((Gerente) p).getCargo()};
                 modelo.addRow(obj);
             }

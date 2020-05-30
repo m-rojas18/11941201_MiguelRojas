@@ -800,8 +800,8 @@
                             <Column editable="true" title="Edad" type="java.lang.Integer"/>
                             <Column editable="true" title="Sexo" type="java.lang.String"/>
                             <Column editable="true" title="Estado Civil" type="java.lang.String"/>
-                            <Column editable="true" title="Altura" type="java.lang.Double"/>
-                            <Column editable="true" title="Peso" type="java.lang.Integer"/>
+                            <Column editable="true" title="Altura" type="java.lang.String"/>
+                            <Column editable="true" title="Peso" type="java.lang.String"/>
                             <Column editable="true" title="Usuario" type="java.lang.String"/>
                             <Column editable="true" title="Contrase&#xf1;a" type="java.lang.String"/>
                             <Column editable="true" title="Cargo" type="java.lang.String"/>
@@ -827,8 +827,8 @@
                             <Column editable="true" title="Edad" type="java.lang.Integer"/>
                             <Column editable="true" title="Sexo" type="java.lang.String"/>
                             <Column editable="true" title="Estado Civil" type="java.lang.String"/>
-                            <Column editable="true" title="Altura" type="java.lang.Double"/>
-                            <Column editable="true" title="Peso" type="java.lang.Integer"/>
+                            <Column editable="true" title="Altura" type="java.lang.String"/>
+                            <Column editable="true" title="Peso" type="java.lang.String"/>
                             <Column editable="true" title="Ocupacion" type="java.lang.String"/>
                             <Column editable="true" title="Horario" type="java.lang.String"/>
                             <Column editable="true" title="Tiempo " type="java.lang.Integer"/>
@@ -1689,6 +1689,9 @@
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Modificar"/>
                   </Properties>
+                  <Events>
+                    <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jButton1MouseClicked"/>
+                  </Events>
                 </Component>
                 <Component class="javax.swing.JButton" name="jb_eliminarObjeto">
                   <Properties>
