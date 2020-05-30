@@ -2454,8 +2454,7 @@ public class Main extends javax.swing.JFrame {
             calidad = tf_calidadOH.getText();
         }
 
-        
-            p = (Persona) cb_personaIngresadaOH.getSelectedItem();
+        p = (Persona) cb_personaIngresadaOH.getSelectedItem();
         //Lugar
         lugar = cb_lugarOH.getSelectedItem().toString();
         //Instrucciones
@@ -2562,13 +2561,8 @@ public class Main extends javax.swing.JFrame {
 
         int op_receptor = cb_receptor.getSelectedIndex();
         int op_emisor = cb_emisor.getSelectedIndex();
-        //Emisor
-        if (cb_emisor.getSelectedIndex() == 0) {
-            JOptionPane.showMessageDialog(jd_EnvioMensajes, "Ocupa elegir a la persona enviando el mensaje.");
-            enviar = false;
-        } else {
-            emisor = lista_contactos.get(op_emisor).getNombre_persona();
-        }
+        //Emisor else {
+        emisor = lista_contactos.get(op_emisor).getNombre_persona();
 
         //Mensaje
         if (ta_mensaje.getText().isEmpty()) {
@@ -2579,11 +2573,11 @@ public class Main extends javax.swing.JFrame {
         }
         //Receptor
 
-        if (cb_receptor.getSelectedIndex() == 0) {
-            JOptionPane.showMessageDialog(jd_EnvioMensajes, "Ocupa elegir a la persona recibiendo el mensaje.");
+        receptor = lista_contactos.get(op_receptor).getNombre_persona();
+        
+        if (op_receptor == op_emisor) {
+            JOptionPane.showMessageDialog(jd_EnvioMensajes,"No le puede enviar mensaje asimismo.");
             enviar = false;
-        } else {
-            receptor = lista_contactos.get(op_receptor).getNombre_persona();
         }
 
         if (enviar) {
